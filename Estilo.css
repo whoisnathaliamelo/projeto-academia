@@ -1,0 +1,75 @@
+.html {
+    margin: 0;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px; 
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+
+.logo-titulo {
+    margin: 0;
+    color: #FFA042;
+    font-size: 22px;
+}
+
+.menu-principal {
+    margin-top: 26px;
+    display: flex;
+    list-style-type: none;
+    gap: 29px;
+}
+
+.conteudo-lista {
+    color: #A3A3A3;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.conteudo-lista-planos {
+    color: #A3A3A3;
+    font-size: 17px;
+    text-decoration: underline;
+    text-decoration-color: #FFA042;
+    text-decoration-thickness: 1.5px; 
+    text-underline-offset: 3px;
+    cursor: default;
+    pointer-events: none;
+}
+
+.menu-secundario {
+    margin-top: 26px;
+    display: flex;
+    list-style-type: none;
+    gap: 24px;
+}
+
+.botao {
+    font-size: 17px;
+    text-decoration: none;
+    background-color: #FFA042;
+    padding: 12px 12px;
+    border-radius: 30px;
+    color: #ffffff;
+}
+
+.conteudo-lista:hover {
+    color: #FFA042;
+}
+
+.botao:hover {
+    background-color: #FF7F00; 
+}
