@@ -1,0 +1,234 @@
+.html {
+    margin: 0;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1rem; /* Define 1rem como 16px */
+}
+
+.header-nav {
+    display: flex;                /* Ativa o flexbox */
+    align-items: center;         /* Alinha verticalmente ao centro */
+    justify-content: center;     /* Centraliza os grupos */
+    gap: 2.5rem;                 /* Espaço entre logo, menu e botões */
+    flex-wrap: wrap;             /* Permite quebra de linha em telas menores */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem; /* Espaço entre imagem e texto da logo */
+}
+
+.logo-titulo {
+    margin: 0;
+    color: #FFA042;
+    font-size: 1.375rem; /* 22px */
+}
+
+.menu-principal {
+    margin-top: 1.625rem;
+    display: flex;
+    list-style-type: none;
+    gap: 1.8125rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.conteudo-lista {
+    color: #A3A3A3;
+    font-size: 1.0625rem;
+    text-decoration: none;
+}
+
+.conteudo-lista-planos {
+    color: #A3A3A3;
+    font-size: 1.0625rem;
+    text-decoration: underline;
+    text-decoration-color: #FFA042;
+    text-decoration-thickness: 0.09375rem;
+    text-underline-offset: 0.1875rem;
+    cursor: default;
+    pointer-events: none;
+}
+
+.menu-secundario {
+    margin-top: 1.625rem;
+    display: flex;
+    list-style-type: none;
+    gap: 1.5rem;
+    flex-wrap: wrap; /* evita quebra desorganizada em telas pequenas */
+    justify-content: center;
+}
+
+.botao {
+    font-size: 1.0625rem;
+    text-decoration: none;
+    background-color: #FFA042;
+    padding: 0.75rem;
+    border-radius: 1.875rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+.conteudo-lista:hover {
+    color: #FF7F00;
+}
+
+.botao:hover {
+    background-color: #FF7F00;
+    transition: background-color 0.3s ease;
+}
+
+.titulo {
+    margin-top: 8.125rem;
+    margin-left: 13.75rem;
+    margin-bottom: 6.25rem;
+    font-size: 2rem;
+}
+
+.cards {
+    display: flex;               /* Ativa flexbox (ficar lado a lado) */
+    gap: 2.8125rem;              /* Espaço entre os cards */
+    align-items: flex-end;       /* Alinha todos os cards pela base */
+    justify-content: center;     /* Centraliza o grupo */
+    flex-wrap: wrap;             /* Permite que os cards se quebrem em linhas */
+}
+
+.card-basico,
+.card-premium,
+.card-intermediario {
+    background-color: #F4F4F4;
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+    display: flex;                /* Layout flexível */
+    flex-direction: column;      /* Alinha conteúdo verticalmente */
+    flex: 1 1 15.625rem;          /* Flexibilidade com largura base de ~250px */
+    max-width: 15.625rem;         /* Limite de largura */
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    height: 25rem;                /* Altura fixa de ~400px */
+    margin-bottom: 9.375rem;      /* Espaço abaixo do card */
+}
+
+.card-premium {
+    margin-top: -1.875rem;        /* Sobe o card 30px */
+    z-index: 1;
+    height: 28.125rem;            /* Altura maior (450px) */
+}
+
+.card-titulo {
+    font-size: 1.0625rem;
+    font-weight: bold;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.preco {
+    font-size: 0.9375rem;
+    margin-top: 0;
+}
+
+.itens-lista {
+    font-size: 0.9375rem;
+    padding-left: 0;
+    list-style-position: inside;
+    margin-bottom: 1.25rem;
+}
+
+.itens-lista li {
+    margin-bottom: 0.5rem;
+}
+
+.botao-assinar {
+    text-transform: uppercase;
+    background-color: #FFA042;
+    color: white;
+    padding: 0.625rem 1.25rem;
+    border-radius: 1.25rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: auto;         /* Empurra o botão para a base do card */
+    align-self: center;       /* Centraliza o botão dentro do card */
+}
+
+.botao-assinar:hover {
+    background-color: #FF7F00;
+}
+
+/* ---------------- Tablet (≤ 768px = 48rem) ---------------- */
+@media (max-width: 48rem) {
+    .cards {
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .card-basico,
+    .card-premium,
+    .card-intermediario {
+        flex: 1 1 45%;
+        max-width: none;
+        height: auto;
+        margin-bottom: 3rem;
+    }
+
+    .titulo {
+        margin-left: 2.5rem;
+        font-size: 1.5rem;
+        margin-bottom: 4rem;
+    }
+
+    .menu-principal,
+    .menu-secundario {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* ---------------- Mobile (≤ 480px = 30rem) ---------------- */
+@media (max-width: 30rem) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-basico,
+    .card-premium,
+    .card-intermediario {
+        width: 90vw;
+        max-width: 20rem;
+        height: auto;
+        margin-bottom: 2.5rem;
+    }
+
+    .titulo {
+        margin-left: 1.25rem;
+        font-size: 1.25rem;
+        margin-bottom: 2.5rem;
+    }
+
+    /* Header empilhado */
+    .header-nav {
+        flex-direction: column;
+        gap: 1.25rem;
+        text-align: center;
+    }
+
+    /* Menus empilhados */
+    .menu-principal,
+    .menu-secundario {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.625rem;
+    }
+
+    /* Botões adaptados para telas menores */
+    .botao {
+        width: 100%;
+        max-width: 15rem;
+    }
+}
